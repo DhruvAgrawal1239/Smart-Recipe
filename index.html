@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Recipe Generator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Smart Recipe Generator 🍽️</h1>
-        <div class="toggle-container">
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider"></span>
-            </label>
-            <span class="toggle-text">Dark Mode</span>
+        <h1 class="gradient-text">🍽️ Smart Recipe Generator</h1>
+        <div class="input-group">
+            <input
+                type="text"
+                id="ingredientInput"
+                placeholder="Enter ingredients (comma-separated)"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='Enter ingredients (comma-separated)'"
+                class="aceternity-input"
+            />
+            <button id="searchBtn" class="aceternity-btn">Find Recipes</button>
         </div>
-        <div class="form-container">
-            <input type="text" id="ingredients" placeholder="Enter ingredients (comma-separated)"/>
-            <select id="diet-filter">
-                <option value="all">All</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="non-vegetarian">Non-Vegetarian</option>
-            </select>
-            <button id="searchBtn">Search Recipes</button>
-        </div>
-        <div id="recipe-container"></div>
+        <div id="recipes"></div>
+        <button id="toggleNutrition" class="aceternity-btn">
+            🍎 Show Nutrition
+        </button>
+        <div id="nutritionInfo" class="hidden"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

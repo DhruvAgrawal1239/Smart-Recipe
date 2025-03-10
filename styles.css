@@ -2,71 +2,100 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #2c3e50, #4ca1af);
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     color: #fff;
+    line-height: 1.6;
 }
 .gradient-text {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3rem; 
+    font-weight: 700; 
     background: linear-gradient(45deg, #ff9966, #ff5e62);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 20px; 
+    letter-spacing: 1px; 
 }
+
 .input-group {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 30px; 
 }
+
 .aceternity-input, .aceternity-select {
-    width: 40%;
-    padding: 12px;
-    border-radius: 8px;
+    width: 30%;
+    padding: 14px; 
+    border-radius: 10px; 
     font-size: 16px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff; 
+    outline: none;
+}
+.aceternity-input::placeholder, .aceternity-select::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
 }
 .aceternity-btn {
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 14px 25px; 
+    font-size: 17px; 
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #ff5733;
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .aceternity-btn:hover {
     background: #e74c3c;
+    transform: scale(1.03);
 }
 #recipes {
-    margin-top: 20px;
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; 
     justify-content: center;
 }
 .recipe {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 12px;
-    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px; 
+    border-radius: 15px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .recipe:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 .hidden {
     display: none;
 }
-
 #nutritionInfo {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 15px;
-    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px; 
+    border-radius: 15px; 
+    margin-top: 25px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 #nutritionInfo.show {
     display: block;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .aceternity-input, .aceternity-select {
+        width: 80%;
+    }
 }
