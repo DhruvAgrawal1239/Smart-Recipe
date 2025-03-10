@@ -1,0 +1,72 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.gradient-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.aceternity-input, .aceternity-select {
+    width: 40%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+.aceternity-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #ff5733;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.aceternity-btn:hover {
+    background: #e74c3c;
+}
+#recipes {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+.recipe {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+.recipe:hover {
+    transform: scale(1.05);
+}
+.hidden {
+    display: none;
+}
+
+#nutritionInfo {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#nutritionInfo.show {
+    display: block;
+    transform: scale(1.05);
+}
